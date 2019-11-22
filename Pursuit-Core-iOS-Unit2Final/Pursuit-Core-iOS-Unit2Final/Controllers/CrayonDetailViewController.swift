@@ -35,6 +35,13 @@ class CrayonDetailViewController: UIViewController {
         updateUI()
         configureStepper()
         colorValues = [crayon?.red ?? 0.0, crayon?.green ?? 0.0, crayon?.blue ?? 0.0, 1.0]
+        if crayon?.name == "Black" {
+            blueLabel.textColor = UIColor.white
+            greenLabel.textColor = UIColor.white
+            redLabel.textColor = UIColor.white
+            alphaLabel.textColor = UIColor.white
+            crayonName.textColor = UIColor.white
+        }
         print(colorValues)
         configureRedSlider()
         configureGreenSlider()
